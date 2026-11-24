@@ -77,21 +77,39 @@ For exploratory charts and research commentary, open `notebooks/01_data_explorat
 
 ## Project layout
 
+
 ```text
-eas510-project2-<netid>/   # actual repository name has no space
-├── README.md
-├── report.md
-├── main.py
-├── config.py
-├── requirements.txt
-├── src/pipeline.py
-├── data/download.py
-├── data/generate_demo.py
-├── data/sample/demo_customer_months.csv
-├── notebooks/01_data_exploration.ipynb
-├── results/sample/
-├── results/full/
-└── .gitignore
+eas510-project2-yokibhac/
+├── README.md                   # Project overview and setup instructions
+├── report.md                   # Research methodology, results, and discussion
+├── main.py                     # Main entry point for ML experiments
+├── config.py                   # Model settings, feature groups, and random seed
+├── requirements.txt            # Pinned Python dependencies
+├── .gitignore                  # Files excluded from version control
+│
+├── src/
+│   ├── __init__.py
+│   └── pipeline.py             # Preprocessing, training, and evaluation
+│
+├── data/
+│   ├── download.py             # Download dataset from Hugging Face
+│   ├── generate_sample.py      # Generate independent demonstration data
+│   ├── raw/                    # Original Hugging Face files (Git-ignored)
+│   │   ├── user_monthly.parquet
+│   │   └── users.parquet
+│   └── sample/
+│       ├── train.csv           # Demonstration training data
+│       ├── validation.csv      # Demonstration validation data
+│       ├── test.csv            # Demonstration evaluation data
+│       ├── sample_manifest.json
+│       └── README.md           # Sample methodology and limitations
+│
+├── notebooks/
+│   └── 01_data_exploration.ipynb
+│
+└── results/
+    ├── sample/                 # Reproducible demonstration outputs
+    └── full/                   # Full-dataset metrics, tables, and figures
 ```
 
 ## Limitations and next steps
