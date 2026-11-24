@@ -1,0 +1,49 @@
+{
+  "mode": "sample",
+  "source": "data/sample/{train,validation,test}.csv (independent synthetic demo)",
+  "seed": 42,
+  "top_fraction": 0.2,
+  "feature_groups": {
+    "billing": [
+      "tenure_month",
+      "plan_type",
+      "monthly_price",
+      "payment_failures"
+    ],
+    "engagement": [
+      "sessions",
+      "feature_usage_score",
+      "active_seats"
+    ],
+    "combined": [
+      "tenure_month",
+      "plan_type",
+      "monthly_price",
+      "payment_failures",
+      "sessions",
+      "feature_usage_score",
+      "active_seats"
+    ]
+  },
+  "raw_rows": 9927,
+  "eligible_rows": 9927,
+  "split_rows": {
+    "train": 5933,
+    "validation": 2147,
+    "test": 1847
+  },
+  "split_months": {
+    "train": [
+      "2024-01-01",
+      "2025-01-01"
+    ],
+    "validation": [
+      "2025-03-01",
+      "2025-06-01"
+    ],
+    "test": [
+      "2025-08-01",
+      "2025-11-01"
+    ]
+  }
+}
